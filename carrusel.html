@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Proyecto - Galería de Imágenes</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f7f6;
+      color: #333;
+      margin: 0;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    /* Título bonito principal */
+    .encabezado-principal {
+      margin-bottom: 25px;
+    }
+
+    .titulo-principal {
+      color: #002b49;
+      font-size: 2.8rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin: 0 0 10px 0;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Línea decorativa debajo del título */
+    .titulo-principal::after {
+      content: '';
+      display: block;
+      width: 60%;
+      height: 4px;
+      background: linear-gradient(90deg, #002b49, #007bff);
+      margin: 8px auto 0 auto;
+      border-radius: 2px;
+    }
+
+    /* Caja con la descripción del proyecto */
+    .descripcion-proyecto {
+      color: #444;
+      font-size: 1.1rem;
+      max-width: 900px;
+      margin: 0 auto 35px auto;
+      line-height: 1.6;
+      background-color: #ffffff;
+      padding: 22px 28px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      border-left: 5px solid #002b49;
+      text-align: justify;
+    }
+
+    /* Matriz de 2 filas por 3 columnas */
+    .matriz-imagenes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      max-width: 1000px;
+      margin: 0 auto 35px auto;
+      padding: 10px;
+    }
+
+    .contenedor-img {
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+      background-color: #fff;
+    }
+
+    .matriz-imagenes img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      cursor: pointer;
+      transition: transform 0.4s ease, filter 0.3s ease;
+    }
+
+    /* Efecto Zoom interactivo al pasar el mouse */
+    .matriz-imagenes img:hover {
+      transform: scale(1.15);
+      filter: brightness(1.05);
+    }
+
+    /* Botón verde de Inicio */
+    .contenedor-boton {
+      margin-top: 20px;
+    }
+
+    .btn-inicio {
+      display: inline-block;
+      background-color: #28a745;
+      color: white;
+      padding: 12px 35px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
+    }
+
+    .btn-inicio:hover {
+      background-color: #218838;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(40, 167, 69, 0.4);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Encabezado Bonito "MI PROYECTO" -->
+  <div class="encabezado-principal">
+    <h1 class="titulo-principal">MI PROYECTO</h1>
+  </div>
+
+  <!-- Descripción explicativa del proyecto -->
+  <p class="descripcion-proyecto">
+    La evolución reciente abarca desde el iPhone 15 Pro Max hasta la serie 18.
+    El iPhone 15 Pro Max destacó por su chasis de titanio, la llegada del puerto USB-C y el chip A17 Pro.
+    El iPhone 16 y 16 Pro Max sumaron el botón dedicado Control de Cámara, pantalla de 6.9" y el chip A18 Pro.
+    El iPhone 17 introdujo un diseño de aluminio forjado con cámara de vapor y sensores Fusion de 48 MP.
+    El iPhone 18 Pro Max incluyó apertura variable en sus lentes, conectividad C2 con IA y el procesador A20 Pro.
+    Todos impulsan Apple Intelligence para elevar el rendimiento y la fotografía en cada generación.
+  </p>
+
+  <!-- Matriz 2x3 con las imágenes e interactividad -->
+  <div class="matriz-imagenes">
+    <div class="contenedor-img">
+      <a href="MIS IMAGENES/IMAGEN1.jpg" target="_blank">
+        <img src="MIS IMAGENES/IMAGEN1.jpg" alt="iPhone 18 Pro Max">
+      </a>
+    </div>
+    <div class="contenedor-img">
+      <a href="MIS IMAGENES/IMAGEN2.jpg" target="_blank">
+        <img src="MIS IMAGENES/IMAGEN2.jpg" alt="iPhone 17a">
+      </a>
+    </div>
+    <div class="contenedor-img">
+      <a href="MIS IMAGENES/IMAGEN3.jpg" target="_blank">
+        <img src="MIS IMAGENES/IMAGEN3.jpg" alt="iPhone 17 Pro Max">
+      </a>
+    </div>
+    <div class="contenedor-img">
+      <a href="MIS IMAGENES/IMAGEN4.jpg" target="_blank">
+        <img src="MIS IMAGENES/IMAGEN4.jpg" alt="iPhone 17 Pro">
+      </a>
+    </div>
+    <div class="contenedor-img">
+      <a href="MIS IMAGENES/IMAGEN5.jpg" target="_blank">
+        <img src="MIS IMAGENES/IMAGEN5.jpg" alt="iPhone 16 Plus">
+      </a>
+    </div>
+    <div class="contenedor-img">
+      <a href="MIS IMAGENES/IMAGEN6.jpg" target="_blank">
+        <img src="MIS IMAGENES/IMAGEN6.jpg" alt="iPhone 15 Pro Max">
+      </a>
+    </div>
+  </div>
+
+  <!-- Botón verde de Inicio -->
+  <div class="contenedor-boton">
+    <a href="index.html" class="btn-inicio">Inicio</a>
+  </div>
+
+</body>
+</html>

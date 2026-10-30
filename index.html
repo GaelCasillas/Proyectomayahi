@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Portafolio JavaScript</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <!-- Contenedor principal construido y estructurado para ser renderizado dinámicamente con JS -->
+  <div id="app"></div>
+
+  <script>
+    // Construcción de la página mediante JavaScript
+    const app = document.getElementById('app');
+
+    // 1. Primer renglón: Título
+    const titulo = document.createElement('h1');
+    titulo.className = 'titulo-principal';
+    titulo.textContent = 'mi portafolio JavaScript';
+    app.appendChild(titulo);
+
+    // 2. Segundo renglón: Nombre
+    const nombre = document.createElement('p');
+    nombre.className = 'texto-nombre';
+    nombre.textContent = 'gael';
+    app.appendChild(nombre);
+
+    // 3. Tercer renglón: Campus
+    const campus = document.createElement('p');
+    campus.className = 'texto-campus';
+    campus.textContent = 'Campus Guadalajara Sur';
+    app.appendChild(campus);
+
+    // 4. Cuarto renglón: Logotipo UVM (Integrado en SVG para carga inmediata)
+    const logo = document.createElement('img');
+    logo.className = 'logo-uvm';
+    logo.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100" width="150"><rect width="300" height="100" fill="%23002b49"/><text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="32" font-weight="bold">UVM</text></svg>';
+    logo.alt = 'Logo UVM';
+    app.appendChild(logo);
+
+    // 5. Sección de Bienvenida UVM (7 renglones, letra cursiva y texto blanco)
+    const contenedorBienvenida = document.createElement('div');
+    contenedorBienvenida.className = 'bienvenida-uvm';
+
+    const textoBienvenida = document.createElement('p');
+    textoBienvenida.innerHTML = 
+      '¡Te damos la más cordial bienvenida a la Universidad del Valle de México!<br>' +
+      'Nos enorgullece ser una institución comprometida con la excelencia educativa.<br>' +
+      'Aquí encontrarás un espacio dedicado a la innovación y al desarrollo profesional.<br>' +
+      'Impulsamos el talento de nuestros estudiantes para transformar activamente el futuro.<br>' +
+      'Explora este portafolio digital diseñado con dedicación y aprendizaje constante.<br>' +
+      'Agradecemos tu valiosa visita a nuestro espacio universitario e interactivo.<br>' +
+      '¡Mucho éxito en cada proyecto y metas que te propongas alcanzar hoy y siempre!';
+
+    contenedorBienvenida.appendChild(textoBienvenida);
+    app.appendChild(contenedorBienvenida);
+
+    // 6. Marquesina de doble línea
+    const marquesinaContenedor = document.createElement('div');
+    marquesinaContenedor.className = 'marquesina-contenedor';
+
+    const marquesinaText = document.createElement('marquee');
+    marquesinaText.behavior = 'scroll';
+    marquesinaText.direction = 'left';
+    marquesinaText.textContent = '¡Bienvenido a mi portafolio digital! - Universidad del Valle de México';
+    
+    marquesinaContenedor.appendChild(marquesinaText);
+    app.appendChild(marquesinaContenedor);
+
+    // 7. Sección de botones
+    const contenedorBotones = document.createElement('div');
+    contenedorBotones.className = 'contenedor-botones';
+
+    // Botón verde (UVM)
+    const btnUVM = document.createElement('a');
+    btnUVM.href = 'https://uvm.mx/';
+    btnUVM.target = '_blank';
+    btnUVM.className = 'btn btn-verde';
+    btnUVM.textContent = 'UVM';
+
+    // Botón azul corregido para que enlace correctamente a carrusel.html
+    const btnCarrusel = document.createElement('a');
+    btnCarrusel.href = 'carrusel.html';
+    btnCarrusel.className = 'btn btn-azul';
+    btnCarrusel.textContent = 'carrusel de imágenes';
+
+    contenedorBotones.appendChild(btnUVM);
+    contenedorBotones.appendChild(btnCarrusel);
+    app.appendChild(contenedorBotones);
+  </script>
+</body>
+</html>

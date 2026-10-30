@@ -1,0 +1,98 @@
+/* Color de fondo gris obscuro para la página entera */
+body {
+  background-color: #2b2b2b;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  color: #ffffff;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* 1er renglón: Times New Roman, 24px, azul marino */
+.titulo-principal {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 24px;
+  color: #000080; /* Azul Marino */
+  margin-bottom: 10px;
+}
+
+/* 2do renglón: Arial Black, 16px, verde claro */
+.texto-nombre {
+  font-family: 'Arial Black', Gadget, sans-serif;
+  font-size: 16px;
+  color: #90ee90; /* Verde Claro */
+  margin: 5px 0;
+}
+
+/* 3er renglón: Arial, 12px, verde claro */
+.texto-campus {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  color: #90ee90; /* Verde Claro */
+  margin: 5px 0 15px 0;
+}
+
+/* Estilo del logotipo */
+.logo-uvm {
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Marquesina con borde de doble línea */
+.marquesina-contenedor {
+  width: 80%;
+  border-top: 4px double #ffffff;
+  border-bottom: 4px double #ffffff;
+  padding: 8px 0;
+  margin: 20px 0;
+}
+
+.marquesina-contenedor marquee {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+/* Estilos de los botones */
+.contenedor-botones {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.4);
+  transition: all 0.1s ease;
+}
+
+/* Botón Verde */
+.btn-verde {
+  background-color: #28a745;
+  color: #ffffff;
+}
+
+/* Botón Azul */
+.btn-azul {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+/* Efecto "Desumir / Hundir" al hacer clic */
+.btn:active {
+  transform: translateY(4px);
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.4);
+}
